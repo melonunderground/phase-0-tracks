@@ -1,6 +1,6 @@
 # Git Definitions
 
-**Instructions: ** Define each of the following Git concepts.
+**Instructions: **
 
 * What is version control?  version control allows you to commit changes you make to a repository and review them before adding to the master repository. Why is it useful? version control allows multiple parties to work on the same project.
 * What is a branch and why would you use one? a branch is a copy of the master up to a certain time and is useful to review changes before updating the master.
