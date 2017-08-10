@@ -1,0 +1,6 @@
+-For each number on a list of elevator keypads:
+  -Until you hear a requested number included on the list of elevator keypads
+    -Request a keypad floor number
+  -If a response not included on the list of elevator keypads is requested
+    -Request a valid keypad floor number
+  -When a valid elevator keypad number is requested select this number on the keypad and respond indicating the floor number selected
