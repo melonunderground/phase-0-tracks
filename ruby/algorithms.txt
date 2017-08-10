@@ -4,3 +4,12 @@
   -If a response not included on the list of elevator keypads is requested
     -Request a valid keypad floor number
   -When a valid elevator keypad number is requested select this number on the keypad and respond indicating the floor number selected
+
+Making the Bed
+
+Remove all 2 pillows, 1 blanket and 1 top sheet leaving bottom sheet wrapped around mattress on top of the bedframe with a footboard and headboard on opposite lengthwise ends of the bed.
+Place top sheet directly on top of bottom sheet printed side down with the seam end of the sheet closest to the headboard.
+Place blanket printed side up on top of top sheet and pull blanket 6 inches towards footboard.
+Fold seam end of top sheet over 6 inches of blanket.
+Place one lengthwise end of first pillow 6 inches from far end of matress leaning against headboard.
+Place second pillow 6 inches from near end of mattress leaning against headboard.
