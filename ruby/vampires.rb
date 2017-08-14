@@ -1,67 +1,56 @@
 puts "what is your name?"
 name = gets.chomp
-puts "your name is #{name}."
 
 puts "how old are you?"
-age = gets.chomp.to_i
-puts "you are #{age}."
+age = gets.chomp
 
 puts "what year were you born?"
-year_born = gets.chomp.to_i
-puts "you were born in #{year_born}."
+year_born = gets.chomp
+
+puts "should we order you garlic bread (y/n)?"
+wants_garlic_bread = gets.chomp
+
+puts "would you like health insurance (y/n)?"
+wants_insurance = gets.chomp
 
 current_year = 2017
-correct_year = age + year_born
+correct_age = age.to_i + year_born.to_i
 
-if correct_year != current_year
-  puts "that can't be your age and the year you were born"
-else
-  puts "thank you"
-end
-
-valid_input = false
-
-until valid_input
-
-  puts "should we order you garlic bread? (y/n)"
-  input = gets.chomp
-
-  if input == "y"
+if
+  wants_garlic_bread == "y"
   wants_garlic_bread = true
-  valid_input = true
-  puts "ok, we will order you garlic bread."
-  elsif input == "n"
+else
   wants_garlic_bread = false
-  valid_input = true
-  puts "ok, no garlic bread."
-  else
-  puts "please enter a y/n response."
-  end
-
 end
 
-valid_input = false
-
-until valid_input
-
-  puts "would you like health insurance? (y/n)?"
-  input = gets.chomp
-
-  if input == "y"
-  wants_health_insurance = true
-  valid_input = true
-  puts "ok, we will get you health insurance."
-  elsif input == "n"
-  wants_health_insurance = false
-  valid_input = true
-  puts "ok, we will not get you health insurance."
-  else
-  puts "please enter a y/n response"
-  end
-
+if
+  wants_insurance == "y"
+  wants_insurance = true
+else
+  wants_insurance = false
 end
 
-if correct_year && (wants_garlic_bread || wants_health_insurance)
-  puts
-  "probably not a vampire."
+if correct_age && (wants_garlic_bread || wants_insurance)
+  puts "probably not a vampire"
 end
+
+if (!correct_age) && (!wants_garlic bread) || (!wants_insurance)
+  puts "probably a vampire"
+end
+
+if (!correct_age) && (!wants_garlic bread) && (!wants_insurance)
+  puts "almost certainly a vampire"
+end
+
+if name == "Drake Cula" || "Tu Fang"
+  puts "definitely a vampire"
+else
+  puts "results inconclusive."
+end
+
+
+
+
+
+
+
