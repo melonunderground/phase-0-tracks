@@ -23,18 +23,24 @@
 " suspects".insert(0,"the usual")
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
+The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+"The mystery of the missing first letter".delete("T")
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+"Elementary,    my   dear        Watson!".split.join("")
+"Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+"z".replace("122").to_i
+"z".ord
+#.ord returns the Integer ordinal of a one-character string
 # => 122
-# (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?".<???>
+# (What is the significance of the number 122 in relation to the character z?)
+#American Standard Code for Information Interchange (ASCII), (...) is a character encoding based on the English alphabet. ASCII codes represent text in computers, communications equipment, and other devices that work with text. (...)
+It currently defines codes for 128 characters: 33 are non-printing, mostly obsolete control characters that affect how text is processed, and 95 are printable characters. --Quote from Wikipedia- LOWER CASE character z is DEC 122 or HTML Number &#122
+
+# "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
