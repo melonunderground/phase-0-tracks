@@ -1,7 +1,3 @@
-
-
-
-
 puts "what is your name?"
 name = gets.chomp
 puts "your name is #{name}."
@@ -13,6 +9,15 @@ puts "you are #{age}."
 puts "what year were you born?"
 year_born = gets.chomp.to_i
 puts "you were born in #{year_born}."
+
+current_year = 2017
+correct_year = age + year_born
+
+if correct_year != current_year
+  puts "that can't be your age and the year you were born"
+else
+  puts "thank you"
+end
 
 valid_input = false
 
@@ -54,4 +59,9 @@ until valid_input
   puts "please enter a y/n response"
   end
 
+end
+
+if correct_year && (wants_garlic_bread || wants_health_insurance)
+  puts
+  "probably not a vampire."
 end
