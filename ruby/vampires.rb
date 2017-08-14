@@ -61,17 +61,17 @@ if name == "Drake Cula" || name == "Tu Fang"
 
 elsif
   current_year == 2017 && (garlic || insurance)
-  puts "probably not a vampire."
+  puts "probably not a vampire"
 #If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”#
 
 elsif
   (current_year != 2017 && !garlic_bread) || !insurance
-  puts "probably a vampire."
+  puts "probably a vampire"
   #If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”#
 
 elsif
   (current_year != 2017) && (!garlic) && (!insurance)
-  puts "almost certainly a vampire."
+  puts "almost certainly a vampire"
   #If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”#
 
 else
@@ -79,7 +79,6 @@ else
 #Otherwise, print “Results inconclusive.”#
 
 end
-puts "actually, never mind! what do these questions have to do with anything? let's all be friends."
+
 end
-
-
+puts "actually, never mind! what do these questions have to do with anything? let's all be friends."
