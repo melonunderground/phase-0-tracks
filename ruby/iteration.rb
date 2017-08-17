@@ -1,4 +1,3 @@
-=begin
 def insulter
   puts "hey you, what are you looking at!?"
   yield("boring","lazy")
@@ -93,14 +92,35 @@ modified_numbers = numbers.take_while { |number| number < 3 }
 
 puts "After .take_while call"
 puts modified_numbers
-=end
 
 
-numbers = {1, 2, 3, 4, 5, 6, 7, 8}
+#.delete_if hash call
 
+numbers = { 1=> 'one', 2=> 'two', 3=> 'three', 4=> 'four', 5=> 'five', 6=> 'six', 7=> 'seven', 8=> 'eight'}
 
+numbers.delete_if {|digit, word| digit <= 4}
 
+puts numbers
 
-numbers = {1, 2, 3, 4, 5, 6, 7, 8}
-numbers = {1, 2, 3, 4, 5, 6, 7, 8}
-numbers = {1, 2, 3, 4, 5, 6, 7, 8}
+#.keep_if hash call
+
+numbers = {1=> 'one', 2=> 'two', 3=> 'three', 4=> 'four', 5=> 'five', 6=> 'six', 7=> 'seven', 8=> 'eight'}
+
+numbers.keep_if {|digit, word| word.length > 3}
+
+puts numbers
+
+#.reject hash call
+numbers = {1=> 'one', 2=> 'two', 3=> 'three', 4=> 'four', 5=> 'five', 6=> 'six', 7=> 'seven', 8=> 'eight'}
+
+modified =numbers.reject {|digit, word| digit > 2}
+
+puts modified
+
+#.reject until false hash call
+
+numbers = {1 => 'one', 2 => 'two', 3=> 'three', 4=> 'four', 5=> 'five', 6=> 'six', 7=> 'seven', 8=> 'eight'}
+
+modified = numbers.reject{|digit, word| word != "eight"}
+
+puts modified
