@@ -6,13 +6,19 @@ if a letter is a vowel convert it to the next vowel in the order aeiou
 if a letter is a consonant convert it to the next consonant in the order bcdfghjklmnpqrstvwxz
 create an interface that gets the spy's name and returns the new name with the tasks above processed on the name.
 continue returning new names until the spy types quit.
+=end
 
-
-
-"dane middleton".chars.map!{|letter| letter.next}.join('').reverse
-
-def vowel_adv(name)
-  vowels = ["a", "e", "i", "o", "u"]
+def name_switch(name)
+new_name = name.split (' ')
+new_name = new_name.insert(1, " ")
+new_name.reverse!
+new_name_str = new_name.join('')
+new_name = new_name_str.split("")
+end
+puts name_switch("dane middleton")
+=begin
+def next_vowel(name)
+  vowels = ["a", "e", "i", "o", "u",]
   name = name.split('')
   name.map! do |letter|
     if vowels.include?(letter)
@@ -23,11 +29,11 @@ def vowel_adv(name)
   end
   puts name
 end
-vowel_adv("dane")
-=end
+next_vowel("dane")
 
+=begin
 def consonant_adv(name)
-  consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"]
+  consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y",z"]
   name = name.split('')
   name.map! do |letter|
     if consonants.include?(letter)
@@ -39,5 +45,5 @@ def consonant_adv(name)
   puts name
 end
   consonant_adv("dazy")
-
+=end
 
