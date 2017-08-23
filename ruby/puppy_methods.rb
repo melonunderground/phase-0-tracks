@@ -48,8 +48,8 @@ class Athlete
     puts "do #{n} jumping jacks"
   end
 
-
 end
+
 john = Athlete.new
 p john.run(3)
 p john.jumping_jacks(40)
@@ -65,5 +65,3 @@ end
 athlete_array.each do |person|
   puts person.jumping_jacks(2)
 end
-
-#p athlete_array
