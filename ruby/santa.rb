@@ -22,6 +22,14 @@ class Santa
   puts "my name is #{@name} and i traveled here from #{@hometown}"
   end
 
+  def celebrate_birthday
+  puts #{@age} += 1
+  end
+
+  def get_mad_at(reindeer_name)
+    reindeer_name
+  end
+
   def age
     @age
   end
@@ -35,6 +43,7 @@ class Santa
   end
 
   end
+
 santas = []
 name = ["jeff","angela","mike","rick","sarah","belinda","maggie"]
 gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -53,6 +62,8 @@ santas.each do |santa|
 santa.speak
 end
 
+santas.each do |santa|
+santa.
 end
 
 
