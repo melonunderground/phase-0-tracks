@@ -8,7 +8,7 @@ class Santa
     @hometown = hometown
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     @age = 0
-    end
+  end
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -22,18 +22,6 @@ class Santa
   puts "my name is #{@name} and i traveled here from #{@hometown}"
   end
 
-  def celebrate_birthday
-    puts "argh"
-  end
-
-  def get_mad_at (reindeer_ranking)
-    @reindeer_ranking = reindeer_ranking.last
-  end
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
   def age
     @age
   end
@@ -42,18 +30,29 @@ class Santa
     @ethnicity
   end
 
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  end
 santas = []
 name = ["jeff","angela","mike","rick","sarah","belinda","maggie"]
 gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 hometown = ["ogdenville","haberbrook","shelbyville","detroit", "chicago","richland","brookville"]
 ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
 gender.length.times do |i|
   santas << Santa.new(name[i],gender[i], ethnicity[i], hometown[i])
 end
-#santas.each do |santa|
-#santa.welcome
-#end
- p santas.celebrate_birthday
+
+santas.each do |santa|
+santa.welcome
+end
+
+santas.each do |santa|
+santa.speak
+end
+
 end
 
 
