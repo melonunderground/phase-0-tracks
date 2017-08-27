@@ -1,14 +1,14 @@
 class Santa
 attr_reader :ethnicity, :hometown, :name
 attr_accessor :age, :gender
-  def initialize (name, gender, ethnicity, hometown, age)
+  def initialize (name, gender, ethnicity, hometown, age = 0)
     puts "Initializing Santa instance..."
     @name = name
     @gender = gender
     @ethnicity = ethnicity
     @hometown = hometown
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
+    @age = age
   end
 
   def speak
@@ -70,7 +70,9 @@ santas[0].gender = "not available"
 
 santas[0].age
 
-100.times do |santa| Santa.new(name.sample,gender.sample,ethnicity.sample,hometown.sample,age)
+100.times do |santa|
+  santa = Santa.new(name.sample,gender.sample,ethnicity.sample,hometown.sample,rand(140))
+p santa
 end
 
 p santas
