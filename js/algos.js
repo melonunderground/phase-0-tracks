@@ -13,3 +13,7 @@ for (var i = 0; i < array.length; i++) {
     }
 }
 console.log(longestWord);
+
+
+var 1 = ({name: "Ren", age: 102}, {name: "Axe", age: 102});
+var 2 = ({transport: "scooter", speed: 65}, {transport: "horse", speed: 15});
