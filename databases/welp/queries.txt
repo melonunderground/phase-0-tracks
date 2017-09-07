@@ -1,0 +1,21 @@
+SELECT reviews.stars, reviews.comment, businesses.name, users.first_name FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+
+4|Wonderful Wasabi|Sushi World|Bradford
+1|Awful, terrible, no good, very bad spelling. C'mon, man!|JoeBob's Sportz Barn|Steven
+5|She smelled great!|Plumbing by Janet|Denzel
+2|Totally did not get laid|The Beagle Nightclub|Merryl
+
+
+
+SELECT users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+
+Pitt|Sushi World|4|Wonderful Wasabi
+Wonder|JoeBob's Sportz Barn|1|Awful, terrible, no good, very bad spelling. C'mon, man!
+George|Plumbing by Janet|5|She smelled great!
+Streepman|The Beagle Nightclub|2|Totally did not get laid
+
+
+
+SELECT reviews.stars, reviews.comment, businesses.name, users.first_name FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE name="Sushi World";
+
+4|Wonderful Wasabi|Sushi World|Bradford
