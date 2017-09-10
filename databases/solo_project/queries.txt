@@ -1,0 +1,161 @@
+SELECT * FROM songs;
+
+1           I'm a Target Too  False         303         1         
+2           Nowhere to Hide   False         304         1         
+3           Codeine           False         309         1         
+4           Blue Sky and the  False         441         1         
+5           Dog on a Leash    True          243         1         
+6           The One to Save   False         427         1         
+7           Written on the W  False         229         1         
+8           Jars at Home      False         210         1         
+9           Burn for Free     False         330         1         
+10          Silver and Gold   False         248         1         
+11          Dyin              False         414         1         
+12          Chippin at My Jo  True          146         1         
+13          Higher Calling    False         317         1         
+14          Wait so Long      False         326         2         
+15          Victory           False         357         2         
+16          It's a War        False         231         2         
+17          Separate          False         334         2         
+18          Bloodshot Eyes    False         500         2         
+19          New Son/Burnt Ir  True          424         2         
+20          Help You          False         314         2         
+21          Feet and Bones    False         156         2         
+22          Gasoline          False         300         2         
+23          Sounds Like a Mo  True          227         2         
+24          New Orleans       False         332         2         
+25          Again             False         316         2         
+
+
+
+UPDATE songs SET name="Chippin at my Jones" WHERE name="Chippin at My Jones";
+
+1           I'm a Target Too  False         303         1         
+2           Nowhere to Hide   False         304         1         
+3           Codeine           False         309         1         
+4           Blue Sky and the  False         441         1         
+5           Dog on a Leash    True          243         1         
+6           The One to Save   False         427         1         
+7           Written on the W  False         229         1         
+8           Jars at Home      False         210         1         
+9           Burn for Free     False         330         1         
+10          Silver and Gold   False         248         1         
+11          Dyin              False         414         1         
+12          Chippin at my Jo  True          146         1         
+13          Higher Calling    False         317         1         
+14          Wait so Long      False         326         2         
+15          Victory           False         357         2         
+16          It's a War        False         231         2         
+17          Separate          False         334         2         
+18          Bloodshot Eyes    False         500         2         
+19          New Son/Burnt Ir  True          424         2         
+20          Help You          False         314         2         
+21          Feet and Bones    False         156         2         
+22          Gasoline          False         300         2         
+23          Sounds Like a Mo  True          227         2         
+24          New Orleans       False         332         2         
+25          Again             False         316         2
+
+SELECT album.name, songs.name, songs.length, songs.instrumental FROM songs JOIN album ON songs.album_id = album.id;
+
+Blue Sky and the Devil  I'm a Target Too  303         False       
+Blue Sky and the Devil  Nowhere to Hide   304         False       
+Blue Sky and the Devil  Codeine           309         False       
+Blue Sky and the Devil  Blue Sky and the  441         False       
+Blue Sky and the Devil  Dog on a Leash    243         True        
+Blue Sky and the Devil  The One to Save   427         False       
+Blue Sky and the Devil  Written on the W  229         False       
+Blue Sky and the Devil  Jars at Home      210         False       
+Blue Sky and the Devil  Burn for Free     330         False       
+Blue Sky and the Devil  Silver and Gold   248         False       
+Blue Sky and the Devil  Dyin              414         False       
+Blue Sky and the Devil  Chippin at my Jo  146         True        
+Blue Sky and the Devil  Higher Calling    317         False       
+Palomino                Wait so Long      326         False       
+Palomino                Victory           357         False       
+Palomino                It's a War        231         False       
+Palomino                Separate          334         False       
+Palomino                Bloodshot Eyes    500         False       
+Palomino                New Son/Burnt Ir  424         True        
+Palomino                Help You          314         False       
+Palomino                Feet and Bones    156         False       
+Palomino                Gasoline          300         False       
+Palomino                Sounds Like a Mo  227         True        
+Palomino                New Orleans       332         False       
+Palomino                Again             316         False       
+
+SELECT album.name, songs.name, songs.length FROM songs JOIN album ON songs.album_id = album.id;
+
+Blue Sky and the Devil  I'm a Target Too  303       
+Blue Sky and the Devil  Nowhere to Hide   304       
+Blue Sky and the Devil  Codeine           309       
+Blue Sky and the Devil  Blue Sky and the  441       
+Blue Sky and the Devil  Dog on a Leash    243       
+Blue Sky and the Devil  The One to Save   427       
+Blue Sky and the Devil  Written on the W  229       
+Blue Sky and the Devil  Jars at Home      210       
+Blue Sky and the Devil  Burn for Free     330       
+Blue Sky and the Devil  Silver and Gold   248       
+Blue Sky and the Devil  Dyin              414       
+Blue Sky and the Devil  Chippin at my Jo  146       
+Blue Sky and the Devil  Higher Calling    317       
+Palomino                Wait so Long      326       
+Palomino                Victory           357       
+Palomino                It's a War        231       
+Palomino                Separate          334       
+Palomino                Bloodshot Eyes    500       
+Palomino                New Son/Burnt Ir  424       
+Palomino                Help You          314       
+Palomino                Feet and Bones    156       
+Palomino                Gasoline          300       
+Palomino                Sounds Like a Mo  227       
+Palomino                New Orleans       332       
+Palomino                Again             316  
+
+DELETE FROM album WHERE name="Palomino";
+
+1           Blue Sky and the Devil
+
+SELECT songs.name, songs.length FROM songs INNER JOIN album ON songs.album_id = album.id;
+
+I'm a Target Too  303       
+Nowhere to Hide   304       
+Codeine           309       
+Blue Sky and the  441       
+Dog on a Leash    243       
+The One to Save   427       
+Written on the W  229       
+Jars at Home      210       
+Burn for Free     330       
+Silver and Gold   248       
+Dyin              414       
+Chippin at my Jo  146       
+Higher Calling    317
+
+SELECT songs.name, songs.instrumental FROM songs LEFT OUTER JOIN album ON songs.album_id = album.id;
+
+I'm a Target Too  False       
+Nowhere to Hide   False       
+Codeine           False       
+Blue Sky and the  False       
+Dog on a Leash    True        
+The One to Save   False       
+Written on the W  False       
+Jars at Home      False       
+Burn for Free     False       
+Silver and Gold   False       
+Dyin              False       
+Chippin at my Jo  True        
+Higher Calling    False       
+Wait so Long      False       
+Victory           False       
+It's a War        False       
+Separate          False       
+Bloodshot Eyes    False       
+New Son/Burnt Ir  True        
+Help You          False       
+Feet and Bones    False       
+Gasoline          False       
+Sounds Like a Mo  True        
+New Orleans       False       
+Again             False
