@@ -1,0 +1,5 @@
+Spend 10 minutes making a plan for how you intend to tackle jQuery and learn as much as you can in two hours. What sorts of resources will help? How often should you stop and test what you just learned? Are breaks important? Make a few notes in the file on how you plan to approach the topic, and why.
+
+To develop an understanding of jQuery in two hours I will start by using the resources I am already familiar with and have bookmarked on my computer. From there I will search in google for visual and text overviews of jQuery. After each specific concept is clarified I should stop and test or code along to soak up the knowledge. I won't be able to capture all the information without taking a break ever 20-30 minutes or if I get stuck to regroup.
+
+After completing my research session I reviewed the jQuery website where it was defined but spent most of the time on the w3schools.com tutorial. This site included exercises after a new feature was introduced and the ability to manipulate and run code. It also provided the directions on how to access jQuery from Google, Microsoft, or my computer. I downloaded jQuery to my computer and added it to my folder.
